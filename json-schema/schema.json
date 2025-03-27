@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://stac-extensions.github.io/template/v1.0.0/schema.json#",
-  "title": "Template Extension",
-  "description": "STAC Template Extension for STAC Items and STAC Collections.",
+  "$id": "https://rs-python.github.io/cadip-stac-extension/v1.0.0/schema.json#",
+  "title": "CADIP Extension",
+  "description": "STAC CADIP Extension for STAC Items and STAC Collections.",
   "oneOf": [
     {
-      "$comment": "This is the schema for STAC Items. Remove this object if this extension only applies to Collections.",
+      "$comment": "This is the schema for STAC Items.",
       "allOf": [
         {
           "$ref": "#/definitions/stac_extensions"
@@ -26,7 +26,8 @@
                 {
                   "$comment": "Require fields here for Item Properties.",
                   "required": [
-                    "template:new_field"
+                    "cadip:id",
+                    "cadip:acquisition_id"
                   ]
                 },
                 {
@@ -35,10 +36,22 @@
               ]
             },
             "assets": {
-              "$comment": "This validates the fields in Item Assets, but does not require them.",
               "type": "object",
               "additionalProperties": {
-                "$ref": "#/definitions/fields"
+                "allOf": [
+                  {
+                    "$comment": "Require fields here for Assets.",
+                    "required": [
+                      "cadip:id",
+                      "cadip:channel",
+                      "cadip:block_number",
+                      "cadip:final_block"
+                    ]
+                  },
+                  {
+                    "$ref": "#/definitions/fields"
+                  }
+                ]
               }
             }
           }
@@ -65,20 +78,6 @@
       ],
       "anyOf": [
         {
-          "$comment": "This is the schema for the top-level fields in a Collection. Remove this if this extension does not define top-level fields for Collections.",
-          "allOf": [
-            {
-              "$comment": "Require fields here for Collections (top-level).",
-              "required": [
-                "template:new_field"
-              ]
-            },
-            {
-              "$ref": "#/definitions/fields"
-            }
-          ]
-        },
-        {
           "$comment": "This validates the fields in Collection Assets, but does not require them.",
           "required": [
             "assets"
@@ -91,7 +90,7 @@
                   "not": {
                     "allOf": [
                       {
-                        "$ref": "#/definitions/require_any_field"
+                        "$ref": "#/definitions/require_any_asset_field"
                       },
                       {
                         "$ref": "#/definitions/fields"
@@ -116,7 +115,7 @@
                   "not": {
                     "allOf": [
                       {
-                        "$ref": "#/definitions/require_any_field"
+                        "$ref": "#/definitions/require_any_asset_field"
                       },
                       {
                         "$ref": "#/definitions/fields"
@@ -152,55 +151,103 @@
         "stac_extensions": {
           "type": "array",
           "contains": {
-            "const": "https://stac-extensions.github.io/template/v1.0.0/schema.json"
+            "const": "https://rs-python.github.io/cadip-stac-extension/v1.0.0/schema.json"
           }
         }
       }
     },
     "require_any_field": {
-      "$comment": "Please list all fields here so that we can force the existence of one of them in other parts of the schemas.",
+      "$comment": "Please list all item fields here so that we can force the existence of one of them in other parts of the schemas.",
       "anyOf": [
-        {"required": ["template:new_field"]},
-        {"required": ["template:xyz"]},
-        {"required": ["template:another_one"]}
+        {"required": ["cadip:id"]},
+        {"required": ["cadip:acquisition_id"]},
+        {"required": ["cadip:num_channels"]},
+        {"required": ["cadip:station_unit_id"]},
+        {"required": ["cadip:antenna_id"]},
+        {"required": ["cadip:front_end_id"]},
+        {"required": ["cadip:planned_data_start"]},
+        {"required": ["cadip:planned_data_stop"]},
+        {"required": ["cadip:retransfer"]},
+        {"required": ["cadip:antenna_status_ok"]},
+        {"required": ["cadip:front_end_status_ok"]},
+        {"required": ["cadip:downlink_status_ok"]},
+        {"required": ["cadip:delivery_push_ok"]}
+      ]
+    },
+    "require_any_asset_field": {
+      "$comment": "Please list all asset fields here so that we can force the existence of one of them in other parts of the schemas.",
+      "anyOf": [
+        {"required": ["cadip:id"]},
+        {"required": ["cadip:channel"]},
+        {"required": ["cadip:block_number"]},
+        {"required": ["cadip:final_block"]},
+        {"required": ["cadip:retransfer"]}
       ]
     },
     "fields": {
-      "$comment": "Add your new fields here. Don't require them here, do that above in the corresponding schema.",
       "type": "object",
       "properties": {
-        "template:new_field": {
+        "cadip:id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "cadip:acquisition_id": {
+          "type": "number"
+        },
+        "cadip:num_channels": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "cadip:station_unit_id": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "cadip:antenna_id": {
           "type": "string"
         },
-        "template:xyz": {
-          "type": "object",
-          "required": [
-            "x",
-            "y",
-            "z"
-          ],
-          "properties": {
-            "x": {
-              "type": "number"
-            },
-            "y": {
-              "type": "number"
-            },
-            "z": {
-              "type": "number"
-            }
-          }
+        "cadip:front_end_id": {
+          "type": "string"
         },
-        "template:another_one": {
-          "type": "array",
-          "items": {
-            "type": "number"
-          }
+        "cadip:planned_data_start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "cadip:planned_data_stop": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "cadip:retransfer": {
+          "type": "boolean"
+        },
+        "cadip:antenna_status_ok": {
+          "type": "boolean"
+        },
+        "cadip:front_end_status_ok": {
+          "type": "boolean"
+        },
+        "cadip:downlink_status_ok": {
+          "type": "boolean"
+        },
+        "cadip:delivery_push_ok": {
+          "type": "boolean"
+        },
+        "cadip:channel": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "cadip:block_number": {
+          "type": "number",
+          "minimum": 1
+        },
+        "cadip:final_block": {
+          "type": "boolean"
         }
       },
       "patternProperties": {
-        "^(?!template:)": {
-          "$comment": "Above, change `template` to the prefix of this extension"
+        "^(?!cadip:)": {
         }
       },
       "additionalProperties": false

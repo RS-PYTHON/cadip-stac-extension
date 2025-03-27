@@ -1,67 +1,628 @@
 {
-  "stac_version": "1.0.0",
+  "stac_version": "1.1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/template/v1.0.0/schema.json"
+    "https://rs-python.github.io/cadip-stac-extension/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
   ],
   "type": "Feature",
-  "id": "item",
-  "bbox": [
-    172.9,
-    1.3,
-    173,
-    1.4
-  ],
-  "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-      [
-        [
-          172.9,
-          1.3
-        ],
-        [
-          173,
-          1.3
-        ],
-        [
-          173,
-          1.4
-        ],
-        [
-          172.9,
-          1.4
-        ],
-        [
-          172.9,
-          1.3
-        ]
-      ]
-    ]
-  },
+  "id": "S1A_20241114143038056552",
+  "collection": "s1_mti",
+  "geometry": null,
   "properties": {
-    "datetime": "2020-12-11T22:38:32Z",
-    "template:new_field": "test",
-    "template:xyz": {
-      "x": 1,
-      "y": 2,
-      "z": 3
+    "datetime": "2024-11-14T14:31:11.032Z",
+    "start_datetime": "2024-11-14T14:30:44.018Z",
+    "end_datetime": "2024-11-14T14:33:48.812Z",
+    "platform": "sentinel-1a",
+    "constellation": "sentinel-1",
+    "published": "2024-11-14T14:31:11.032Z",
+    "cadip:id": "6894eb36-416e-469e-8788-9a0a2b8f3a8d",
+    "cadip:num_channels": 2,
+    "cadip:station_unit_id": "04",
+    "sat:absolute_orbit": 56552,
+    "cadip:acquisition_id": 565521,
+    "cadip:antenna_id": "TLR3",
+    "cadip:front_end_id": "DEM-KSPT-SENT-DFEP4",
+    "cadip:retransfer": false,
+    "cadip:antenna_status_ok": true,
+    "cadip:front_end_status_ok": true,
+    "cadip:planned_data_start": "2024-11-14T14:30:38.477Z",
+    "cadip:planned_data_stop": "2024-11-14T14:33:22.662Z",
+    "cadip:downlink_status_ok": true,
+    "cadip:delivery_push_ok": true
+  },
+  "assets": {
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00001.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(228b97bc-aa04-4036-8450-3106bc7684bb)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00001.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "228b97bc-aa04-4036-8450-3106bc7684bb",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 1,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:31:26.576Z",
+      "eviction_datetime": "2024-11-21T14:30:00Z",
+      "file:size": 314571600
     },
-    "template:another_one": [
-      1,
-      2,
-      3
-    ]
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00001.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(bba71884-5c9c-4d4b-8986-1a428b87b441)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00001.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "bba71884-5c9c-4d4b-8986-1a428b87b441",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 1,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:31:26.646Z",
+      "eviction_datetime": "2024-11-21T14:30:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00002.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(6c9edc6c-f32c-4aef-956e-4fe02055e905)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00002.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "6c9edc6c-f32c-4aef-956e-4fe02055e905",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 2,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:31:30.998Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00002.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(9dadc880-2072-4b32-b407-07987d6ac026)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00002.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "9dadc880-2072-4b32-b407-07987d6ac026",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 2,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:31:33.098Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00003.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(93544013-687b-469f-aea0-ed568149cae7)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00003.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "93544013-687b-469f-aea0-ed568149cae7",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 3,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:31:33.155Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00003.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(9cae6fe7-f66f-4f23-b635-d4772145feb4)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00003.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "9cae6fe7-f66f-4f23-b635-d4772145feb4",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 3,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:31:33.209Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00004.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(fa77e569-988f-4cea-825a-eb8ae8a73079)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00004.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "fa77e569-988f-4cea-825a-eb8ae8a73079",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 4,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:31:33.274Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00004.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(b430bfbf-24ac-4024-800c-64c3bc86424e)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00004.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "b430bfbf-24ac-4024-800c-64c3bc86424e",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 4,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:31:40.234Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00005.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(0dcb0e1e-b90c-4cc6-80a9-ec8f666a3d0c)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00005.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "0dcb0e1e-b90c-4cc6-80a9-ec8f666a3d0c",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 5,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:31:48.833Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00005.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(2eb5be1b-2512-4cc2-a8bd-88b6d6cee86e)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00005.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "2eb5be1b-2512-4cc2-a8bd-88b6d6cee86e",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 5,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:31:56.912Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00006.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(3e75feb4-355c-4030-b270-e9b161f75601)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00006.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "3e75feb4-355c-4030-b270-e9b161f75601",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 6,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:32:02.351Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00006.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(c7a323d1-744b-4c59-8eb6-ee496cb03ddb)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00006.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "c7a323d1-744b-4c59-8eb6-ee496cb03ddb",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 6,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:32:07.392Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00007.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(b710a6b4-87a8-4181-8341-220904931d4a)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00007.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "b710a6b4-87a8-4181-8341-220904931d4a",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 7,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:32:09.558Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00007.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(70be03bc-c98f-4ee3-b041-610f2a12d6d1)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00007.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "70be03bc-c98f-4ee3-b041-610f2a12d6d1",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 7,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:32:09.618Z",
+      "eviction_datetime": "2024-11-21T14:31:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00008.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(97be66f9-9f9b-40e6-b441-8439c143bcfd)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00008.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "97be66f9-9f9b-40e6-b441-8439c143bcfd",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 8,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:32:13.889Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00008.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(33bc2567-86d5-4ed9-944b-82e68a5ba951)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00008.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "33bc2567-86d5-4ed9-944b-82e68a5ba951",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 8,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:32:20.974Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00009.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(1eb5df15-44fc-4bcc-b48b-c3f9c1890116)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00009.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "1eb5df15-44fc-4bcc-b48b-c3f9c1890116",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 9,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:32:23.108Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00010.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(365cb037-6630-4066-9908-1235e9da386a)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00010.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "365cb037-6630-4066-9908-1235e9da386a",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 10,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:32:36.302Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00009.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(b6189db0-63e2-4560-97ef-15a0aa09840d)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00009.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "b6189db0-63e2-4560-97ef-15a0aa09840d",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 9,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:32:36.378Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00011.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(70ce8b61-da40-467a-b5ce-7741170ee114)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00011.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "70ce8b61-da40-467a-b5ce-7741170ee114",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 11,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:32:41.591Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00010.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(985c89df-ca2c-41d7-beea-a8f840116fb0)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00010.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "985c89df-ca2c-41d7-beea-a8f840116fb0",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 10,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:32:46.474Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00012.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(c7d923f5-92f5-4527-8514-943eb62e9c84)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00012.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "c7d923f5-92f5-4527-8514-943eb62e9c84",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 12,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:32:48.888Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00012.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(b6f3f76e-d283-47a1-bc51-a47c11c467e4)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00012.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "b6f3f76e-d283-47a1-bc51-a47c11c467e4",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 12,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:32:49.082Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00011.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(0b504c75-64cf-41bb-afa0-f1e7bbf0eb64)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00011.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "0b504c75-64cf-41bb-afa0-f1e7bbf0eb64",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 11,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:32:49.178Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00013.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(d3c91655-2387-49a9-a745-00d27fc43132)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00013.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "d3c91655-2387-49a9-a745-00d27fc43132",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 13,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:33:07.633Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00013.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(90f3c19e-2dad-49ec-aa2e-16620c9502ff)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00013.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "90f3c19e-2dad-49ec-aa2e-16620c9502ff",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 13,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:33:07.712Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00014.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(ace17738-4068-4991-b012-300602739e84)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00014.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "ace17738-4068-4991-b012-300602739e84",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 14,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:33:13.05Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00014.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(652f6b59-38e5-4951-a7b8-af7b28fb3c6a)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00014.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "652f6b59-38e5-4951-a7b8-af7b28fb3c6a",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 14,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:33:13.108Z",
+      "eviction_datetime": "2024-11-21T14:32:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00015.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(19e10c8c-f786-4e8f-9a60-31851215a4a5)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00015.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "19e10c8c-f786-4e8f-9a60-31851215a4a5",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 15,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:33:17.476Z",
+      "eviction_datetime": "2024-11-21T14:33:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00015.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(3686651a-83bc-46f0-95ea-c0591772e255)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00015.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "3686651a-83bc-46f0-95ea-c0591772e255",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 15,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:33:17.525Z",
+      "eviction_datetime": "2024-11-21T14:33:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00016.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(34113a25-3d27-4ed8-bedb-c1e1a3dffc2f)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00016.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "34113a25-3d27-4ed8-bedb-c1e1a3dffc2f",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 16,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:33:21.858Z",
+      "eviction_datetime": "2024-11-21T14:33:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00016.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(a7bc86db-206e-4ffd-bee7-cd9102f0901a)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00016.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "a7bc86db-206e-4ffd-bee7-cd9102f0901a",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 16,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:33:31.822Z",
+      "eviction_datetime": "2024-11-21T14:33:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00017.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(7032f9d0-5aa1-406a-aee9-1f17a18d1978)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00017.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "7032f9d0-5aa1-406a-aee9-1f17a18d1978",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 17,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:33:38.596Z",
+      "eviction_datetime": "2024-11-21T14:33:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00017.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(8a71319c-2138-49b4-aec3-24fad69129ba)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00017.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "8a71319c-2138-49b4-aec3-24fad69129ba",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 17,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:33:40.942Z",
+      "eviction_datetime": "2024-11-21T14:33:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00018.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(e5ccdae1-248e-489d-9d99-090c8c0234e9)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00018.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "e5ccdae1-248e-489d-9d99-090c8c0234e9",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 18,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:33:41.004Z",
+      "eviction_datetime": "2024-11-21T14:33:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00019.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(410222ff-52eb-4869-92ef-bd89d86b4318)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00019.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "410222ff-52eb-4869-92ef-bd89d86b4318",
+      "cadip:retransfer": false,
+      "cadip:final_block": true,
+      "cadip:block_number": 19,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:33:41.071Z",
+      "eviction_datetime": "2024-11-21T14:33:00Z",
+      "file:size": 80094140
+    },
+    "DCS_04_S1A_20241114143038056552_ch2_DSDB_00018.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(2815dd38-08e5-44d5-8e78-b3d30a278ae3)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch2_DSDB_00018.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "2815dd38-08e5-44d5-8e78-b3d30a278ae3",
+      "cadip:retransfer": false,
+      "cadip:final_block": false,
+      "cadip:block_number": 18,
+      "cadip:channel": 2,
+      "created": "2024-11-14T14:33:41.137Z",
+      "eviction_datetime": "2024-11-21T14:33:00Z",
+      "file:size": 314571600
+    },
+    "DCS_04_S1A_20241114143038056552_ch1_DSDB_00019.raw": {
+      "href": "https://cadip.example.com/cadip/1.0/odata/v1/Files(4ef09c22-2e8a-47d2-8680-54e137a74c85)/$value",
+      "title": "DCS_04_S1A_20241114143038056552_ch1_DSDB_00019.raw",
+      "roles": [
+        "cadu"
+      ],
+      "cadip:id": "4ef09c22-2e8a-47d2-8680-54e137a74c85",
+      "cadip:retransfer": false,
+      "cadip:final_block": true,
+      "cadip:block_number": 19,
+      "cadip:channel": 1,
+      "created": "2024-11-14T14:33:48.812Z",
+      "eviction_datetime": "2024-11-21T14:33:00Z",
+      "file:size": 105351848
+    }
   },
   "links": [
     {
-      "href": "https://example.com/examples/item.json",
-      "rel": "self"
+      "rel": "collection",
+      "type": "application/json",
+      "href": "http://cadip-stac.example.com/cadip/collections/s1_mti"
+    },
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "http://cadip-stac.example.com/cadip/collections/s1_mti"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "http://cadip-stac.example.com/cadip/"
+    },
+    {
+      "rel": "self",
+      "type": "application/geo+json",
+      "href": "http://cadip-stac.example.com/cadip/collections/s1_mti/items/S1A_20241114143038056552"
     }
-  ],
-  "assets": {
-    "data": {
-      "href": "https://example.com/examples/file.xyz",
-      "template:new_field": "test"
-    }
-  }
+  ]
 }
