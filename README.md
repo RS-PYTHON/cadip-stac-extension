@@ -87,3 +87,9 @@ If the tests reveal formatting problems with the examples, you can fix them with
 ```bash
 npm run format-examples
 ```
+
+---
+
+![](docs/images/banner_logo.jpg)
+
+This project is funded by the EU and ESA.
