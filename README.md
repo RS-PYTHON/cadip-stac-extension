@@ -21,7 +21,7 @@ Allows to describe Copernicus CADIP sessions from Acquisition Ground Stations as
 | ------------------------- | ------------- | ------------------------------------------------------------------- |
 | cadip:id                  | string (uuid) | **REQUIRED**. UUID for the Session instance within the CADIP        |
 | cadip:acquisition_id      | string        | **REQUIRED**. Acquisition id code as from the acquisition plan      |
-| cadip:num_channels        | \[number]     | This is the number of channels for the session (1, 2, 3, 4)         |
+| cadip:num_channels        | number        | This is the number of channels for the session (1, 2, 3, 4)         |
 | cadip:station_unit_id     | string        | 2 digit X-band station unit ID                                      |
 | cadip:antenna_id          | string        | Identification of the antenna used                                  |
 | cadip:front_end_id        | string        | FEP identifier. Usually each Station used two acquisition chains    |
@@ -99,8 +99,8 @@ It is set to the value depending on the evaluation of the data dissemination to 
 | Field Name                | Type          | Description                                                                   |
 | ------------------------- | ------------- | ----------------------------------------------------------------------------- |
 | cadip:id                  | string (uuid) | **REQUIRED**. UUID for the DSDB File instance within the CADIP                |
-| cadip:channel             | \[number]     | **REQUIRED**. This is the channel (1, 2, 3, 4)                                |
-| cadip:block_number        | \[number]     | **REQUIRED**. DSDB numbering, always starting from 1 in each session          |
+| cadip:channel             | number        | **REQUIRED**. This is the channel (1, 2, 3, 4)                                |
+| cadip:block_number        | number        | **REQUIRED**. DSDB numbering, always starting from 1 in each session          |
 | cadip:final_block         | boolean       | **REQUIRED**. Set to true if it corresponds to the final file for the session |
 | cadip:retransfer          | boolean       | Flags whether the data file is part of a retransfer                           |
 
