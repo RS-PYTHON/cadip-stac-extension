@@ -16,4 +16,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: <https://github.com/stac-extensions/template/compare/v1.0.0...HEAD>
+[Unreleased]: <https://github.com/RS-PYTHON/cadip-stac-extension/compare/v1.0.0...HEAD>
+
+## [v1.0.0] - 2025-03-28
+
+### Added
+
+- Initial version
+
+[v1.0.0]: <https://github.com/RS-PYTHON/cadip-stac-extension/tree/v1.0.0>
