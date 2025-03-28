@@ -1,0 +1,256 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://rs-python.github.io/cadip-stac-extension/v1.0.0/schema.json#",
+  "title": "CADIP Extension",
+  "description": "STAC CADIP Extension for STAC Items and STAC Collections.",
+  "oneOf": [
+    {
+      "$comment": "This is the schema for STAC Items.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/stac_extensions"
+        },
+        {
+          "type": "object",
+          "required": [
+            "type",
+            "properties",
+            "assets"
+          ],
+          "properties": {
+            "type": {
+              "const": "Feature"
+            },
+            "properties": {
+              "allOf": [
+                {
+                  "$comment": "Require fields here for Item Properties.",
+                  "required": [
+                    "cadip:id",
+                    "cadip:acquisition_id"
+                  ]
+                },
+                {
+                  "$ref": "#/definitions/fields"
+                }
+              ]
+            },
+            "assets": {
+              "type": "object",
+              "additionalProperties": {
+                "allOf": [
+                  {
+                    "$comment": "Require fields here for Assets.",
+                    "required": [
+                      "cadip:id",
+                      "cadip:channel",
+                      "cadip:block_number",
+                      "cadip:final_block"
+                    ]
+                  },
+                  {
+                    "$ref": "#/definitions/fields"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "$comment": "This is the schema for STAC Collections.",
+      "type": "object",
+      "allOf": [
+        {
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "type": {
+              "const": "Collection"
+            }
+          }
+        },
+        {
+          "$ref": "#/definitions/stac_extensions"
+        }
+      ],
+      "anyOf": [
+        {
+          "$comment": "This validates the fields in Collection Assets, but does not require them.",
+          "required": [
+            "assets"
+          ],
+          "properties": {
+            "assets": {
+              "type": "object",
+              "not": {
+                "additionalProperties": {
+                  "not": {
+                    "allOf": [
+                      {
+                        "$ref": "#/definitions/require_any_asset_field"
+                      },
+                      {
+                        "$ref": "#/definitions/fields"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "$comment": "This is the schema for the fields in Item Asset Definitions. It doesn't require any fields.",
+          "required": [
+            "item_assets"
+          ],
+          "properties": {
+            "item_assets": {
+              "type": "object",
+              "not": {
+                "additionalProperties": {
+                  "not": {
+                    "allOf": [
+                      {
+                        "$ref": "#/definitions/require_any_asset_field"
+                      },
+                      {
+                        "$ref": "#/definitions/fields"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "$comment": "This is the schema for the fields in Summaries. By default, only checks the existence of the properties, but not the schema of the summaries.",
+          "required": [
+            "summaries"
+          ],
+          "properties": {
+            "summaries": {
+              "$ref": "#/definitions/require_any_field"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "definitions": {
+    "stac_extensions": {
+      "type": "object",
+      "required": [
+        "stac_extensions"
+      ],
+      "properties": {
+        "stac_extensions": {
+          "type": "array",
+          "contains": {
+            "const": "https://rs-python.github.io/cadip-stac-extension/v1.0.0/schema.json"
+          }
+        }
+      }
+    },
+    "require_any_field": {
+      "$comment": "Please list all item fields here so that we can force the existence of one of them in other parts of the schemas.",
+      "anyOf": [
+        {"required": ["cadip:id"]},
+        {"required": ["cadip:acquisition_id"]},
+        {"required": ["cadip:num_channels"]},
+        {"required": ["cadip:station_unit_id"]},
+        {"required": ["cadip:antenna_id"]},
+        {"required": ["cadip:front_end_id"]},
+        {"required": ["cadip:planned_data_start"]},
+        {"required": ["cadip:planned_data_stop"]},
+        {"required": ["cadip:retransfer"]},
+        {"required": ["cadip:antenna_status_ok"]},
+        {"required": ["cadip:front_end_status_ok"]},
+        {"required": ["cadip:downlink_status_ok"]},
+        {"required": ["cadip:delivery_push_ok"]}
+      ]
+    },
+    "require_any_asset_field": {
+      "$comment": "Please list all asset fields here so that we can force the existence of one of them in other parts of the schemas.",
+      "anyOf": [
+        {"required": ["cadip:id"]},
+        {"required": ["cadip:channel"]},
+        {"required": ["cadip:block_number"]},
+        {"required": ["cadip:final_block"]},
+        {"required": ["cadip:retransfer"]}
+      ]
+    },
+    "fields": {
+      "type": "object",
+      "properties": {
+        "cadip:id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "cadip:acquisition_id": {
+          "type": "number"
+        },
+        "cadip:num_channels": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "cadip:station_unit_id": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2
+        },
+        "cadip:antenna_id": {
+          "type": "string"
+        },
+        "cadip:front_end_id": {
+          "type": "string"
+        },
+        "cadip:planned_data_start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "cadip:planned_data_stop": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "cadip:retransfer": {
+          "type": "boolean"
+        },
+        "cadip:antenna_status_ok": {
+          "type": "boolean"
+        },
+        "cadip:front_end_status_ok": {
+          "type": "boolean"
+        },
+        "cadip:downlink_status_ok": {
+          "type": "boolean"
+        },
+        "cadip:delivery_push_ok": {
+          "type": "boolean"
+        },
+        "cadip:channel": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "cadip:block_number": {
+          "type": "number",
+          "minimum": 1
+        },
+        "cadip:final_block": {
+          "type": "boolean"
+        }
+      },
+      "patternProperties": {
+        "^(?!cadip:)": {
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
