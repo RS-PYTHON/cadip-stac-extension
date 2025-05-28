@@ -24,6 +24,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added cadip:station_id field to distinguish several acquisition stations from a single CADIP endpoint
 
+### Fixed
+
+- Fix type of acquisition_id
+
 ## [v1.1.0] - 2025-04-04
 
 ### Changed
