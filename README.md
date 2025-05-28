@@ -1,7 +1,7 @@
 # CADIP Extension Specification
 
 - **Title:** CADIP
-- **Identifier:** <https://home.rs-python.eu/cadip-stac-extension/v1.1.0/schema.json>
+- **Identifier:** <https://home.rs-python.eu/cadip-stac-extension/v1.2.0/schema.json>
 - **Field Name Prefix:** cadip
 - **Scope:** Item, Assets
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Pilot
@@ -22,6 +22,7 @@ Allows to describe Copernicus CADIP sessions from Acquisition Ground Stations as
 | cadip:id                  | string (uuid) | **REQUIRED**. UUID for the Session instance within the CADIP        |
 | cadip:acquisition_id      | string        | **REQUIRED**. Acquisition id code as from the acquisition plan      |
 | cadip:num_channels        | number        | This is the number of channels for the session (1, 2, 3, 4)         |
+| cadip:station_id          | string        | Parameter for distinguishing acquisition station.                   |
 | cadip:station_unit_id     | string        | 2 digit X-band station unit ID                                      |
 | cadip:antenna_id          | string        | Identification of the antenna used                                  |
 | cadip:front_end_id        | string        | FEP identifier. Usually each Station used two acquisition chains    |
@@ -48,6 +49,13 @@ the Processing facility
 #### cadip:num_channels
 
 This is the number of channels for the session. Allowed values are: 1, 2, 3, 4.
+
+#### cadip:station_id
+
+Parameter for distinguishing acquisition station. Example values:
+- INS_ (for SSC Inuvik)
+- KSE_ (for SSC Esrange)
+- PAR_ (for SSC Punta Arenas)
 
 #### cadip:station_unit_id
 

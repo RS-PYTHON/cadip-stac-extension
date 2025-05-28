@@ -16,7 +16,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: <https://github.com/RS-PYTHON/cadip-stac-extension/compare/v1.1.0...HEAD>
+[Unreleased]: <https://github.com/RS-PYTHON/cadip-stac-extension/compare/v1.2.0...HEAD>
+
+## [v1.2.0] - 2025-05-28
+
+### Added
+
+- Added cadip:station_id field to distinguish several acquisition stations from a single CADIP endpoint
 
 ## [v1.1.0] - 2025-04-04
 
@@ -30,5 +36,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial version
 
+[v1.2.0]: <https://github.com/RS-PYTHON/cadip-stac-extension/tree/v1.2.0>
 [v1.1.0]: <https://github.com/RS-PYTHON/cadip-stac-extension/tree/v1.1.0>
 [v1.0.0]: <https://github.com/RS-PYTHON/cadip-stac-extension/tree/v1.0.0>
