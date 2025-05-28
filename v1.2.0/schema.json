@@ -193,7 +193,7 @@
           "format": "uuid"
         },
         "cadip:acquisition_id": {
-          "type": "number"
+          "type": "string"
         },
         "cadip:num_channels": {
           "type": "number",
