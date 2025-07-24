@@ -20,7 +20,7 @@
     "cadip:num_channels": 2,
     "cadip:station_unit_id": "04",
     "sat:absolute_orbit": 56552,
-    "cadip:acquisition_id": "565521",
+    "cadip:acquisition_id": 565521,
     "cadip:antenna_id": "TLR3",
     "cadip:front_end_id": "DEM-KSPT-SENT-DFEP4",
     "cadip:retransfer": false,
