@@ -1,7 +1,7 @@
 # CADIP Extension Specification
 
 - **Title:** CADIP
-- **Identifier:** <https://home.rs-python.eu/cadip-stac-extension/v1.2.0/schema.json>
+- **Identifier:** <https://home.rs-python.eu/cadip-stac-extension/v1.3.0/schema.json>
 - **Field Name Prefix:** cadip
 - **Scope:** Item, Assets
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Pilot
@@ -17,22 +17,22 @@ Allows to describe Copernicus CADIP sessions from Acquisition Ground Stations as
 
 ## Item Properties
 
-| Field Name                | Type          | Description                                                         |
-| ------------------------- | ------------- | ------------------------------------------------------------------- |
-| cadip:id                  | string (uuid) | **REQUIRED**. UUID for the Session instance within the CADIP        |
-| cadip:acquisition_id      | string        | **REQUIRED**. Acquisition id code as from the acquisition plan      |
-| cadip:num_channels        | number        | This is the number of channels for the session (1, 2, 3, 4)         |
-| cadip:station_id          | string        | Parameter for distinguishing acquisition station.                   |
-| cadip:station_unit_id     | string        | 2 digit X-band station unit ID                                      |
-| cadip:antenna_id          | string        | Identification of the antenna used                                  |
-| cadip:front_end_id        | string        | FEP identifier. Usually each Station used two acquisition chains    |
-| cadip:planned_data_start  | datetime      | Planned Date/Time start of the downlink as extracted from SAPF file |
-| cadip:planned_data_stop   | datetime      | Planned Date/Time stop of the downlink as extracted from SAPF file  |
-| cadip:retransfer          | boolean       | Flags whether the session corresponds to a retransfer               |
-| cadip:antenna_status_ok   | boolean       | Determines the quality of the acquired pass at Antenna level        |
-| cadip:front_end_status_ok | boolean       | Determines the quality of the acquired pass at FEP level            |
-| cadip:downlink_status_ok  | boolean       | Overall status of downlink                                          |
-| cadip:delivery_push_ok    | boolean       | Determines the evaluation of the data dissemination to the DDP      |
+| Field Name                | Type            | Description                                                         |
+| ------------------------- | --------------- | ------------------------------------------------------------------- |
+| cadip:id                  | string (uuid)   | **REQUIRED**. UUID for the Session instance within the CADIP        |
+| cadip:acquisition_id      | string / number | **REQUIRED**. Acquisition id code as from the acquisition plan      |
+| cadip:num_channels        | number          | This is the number of channels for the session (1, 2, 3, 4)         |
+| cadip:station_id          | string          | Parameter for distinguishing acquisition station.                   |
+| cadip:station_unit_id     | string          | 2 digit X-band station unit ID                                      |
+| cadip:antenna_id          | string          | Identification of the antenna used                                  |
+| cadip:front_end_id        | string          | FEP identifier. Usually each Station used two acquisition chains    |
+| cadip:planned_data_start  | datetime        | Planned Date/Time start of the downlink as extracted from SAPF file |
+| cadip:planned_data_stop   | datetime        | Planned Date/Time stop of the downlink as extracted from SAPF file  |
+| cadip:retransfer          | boolean         | Flags whether the session corresponds to a retransfer               |
+| cadip:antenna_status_ok   | boolean         | Determines the quality of the acquired pass at Antenna level        |
+| cadip:front_end_status_ok | boolean         | Determines the quality of the acquired pass at FEP level            |
+| cadip:downlink_status_ok  | boolean         | Overall status of downlink                                          |
+| cadip:delivery_push_ok    | boolean         | Determines the evaluation of the data dissemination to the DDP      |
 
 ### Additional Item Property Information
 
