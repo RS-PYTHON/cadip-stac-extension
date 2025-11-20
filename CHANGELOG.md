@@ -16,23 +16,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-[Unreleased]: <https://github.com/RS-PYTHON/cadip-stac-extension/compare/v1.3.0...HEAD>
+[Unreleased]: <https://github.com/RS-PYTHON/cadip-stac-extension/compare/v1.4.0...HEAD>
+
+## [v1.4.0] - 2025-11-20
+
+### Changed
+
+- Replaced `cadip:id` by `externalIds[scheme=cadip]` from [Additional Identifiers](https://github.com/stac-extensions/external-ids) extension
 
 ## [v1.3.0] - 2025-07-24
 
 ### Changed
 
-- Allow string and integer types for cadip:acquisition_id
+- Allow string and integer types for `cadip:acquisition_id`
 
 ## [v1.2.0] - 2025-05-28
 
 ### Added
 
-- Added cadip:station_id field to distinguish several acquisition stations from a single CADIP endpoint
+- Added `cadip:station_id` field to distinguish several acquisition stations from a single CADIP endpoint
 
 ### Fixed
 
-- Fix type of acquisition_id
+- Fix type of `acquisition_id`
 
 ## [v1.1.0] - 2025-04-04
 
@@ -46,6 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial version
 
+[v1.4.0]: <https://github.com/RS-PYTHON/cadip-stac-extension/tree/v1.4.0>
 [v1.3.0]: <https://github.com/RS-PYTHON/cadip-stac-extension/tree/v1.3.0>
 [v1.2.0]: <https://github.com/RS-PYTHON/cadip-stac-extension/tree/v1.2.0>
 [v1.1.0]: <https://github.com/RS-PYTHON/cadip-stac-extension/tree/v1.1.0>

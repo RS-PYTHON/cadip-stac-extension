@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://home.rs-python.eu/cadip-stac-extension/v1.3.0/schema.json#",
+  "$id": "https://home.rs-python.eu/cadip-stac-extension/v1.4.0/schema.json#",
   "title": "CADIP Extension",
   "description": "STAC CADIP Extension for STAC Items and STAC Collections.",
   "oneOf": [
@@ -26,7 +26,7 @@
                 {
                   "$comment": "Require fields here for Item Properties.",
                   "required": [
-                    "cadip:id",
+                    "externalIds",
                     "cadip:acquisition_id"
                   ]
                 },
@@ -42,7 +42,7 @@
                   {
                     "$comment": "Require fields here for Assets.",
                     "required": [
-                      "cadip:id",
+                      "externalIds",
                       "cadip:channel",
                       "cadip:block_number",
                       "cadip:final_block"
@@ -150,16 +150,38 @@
       "properties": {
         "stac_extensions": {
           "type": "array",
-          "contains": {
-            "const": "https://home.rs-python.eu/cadip-stac-extension/v1.3.0/schema.json"
-          }
+          "allOf": [
+            {
+              "contains": {
+                "const": "https://home.rs-python.eu/cadip-stac-extension/v1.4.0/schema.json"
+              }
+            },
+            {
+              "contains": {
+                "type": "string",
+                "pattern": "^https://stac-extensions\\.github\\.io/external-ids/.+/schema\\.json$"
+              }
+            },
+            {
+              "contains": {
+                "type": "string",
+                "pattern": "^https://stac-extensions\\.github\\.io/file/.+/schema\\.json$"
+              }
+            },
+            {
+              "contains": {
+                "type": "string",
+                "pattern": "^https://stac-extensions\\.github\\.io/timestamps/.+/schema\\.json$"
+              }
+            }
+          ]
         }
       }
     },
     "require_any_field": {
       "$comment": "Please list all item fields here so that we can force the existence of one of them in other parts of the schemas.",
       "anyOf": [
-        {"required": ["cadip:id"]},
+        {"required": ["externalIds"]},
         {"required": ["cadip:acquisition_id"]},
         {"required": ["cadip:num_channels"]},
         {"required": ["cadip:station_id"]},
@@ -178,7 +200,7 @@
     "require_any_asset_field": {
       "$comment": "Please list all asset fields here so that we can force the existence of one of them in other parts of the schemas.",
       "anyOf": [
-        {"required": ["cadip:id"]},
+        {"required": ["externalIds"]},
         {"required": ["cadip:channel"]},
         {"required": ["cadip:block_number"]},
         {"required": ["cadip:final_block"]},
@@ -188,9 +210,22 @@
     "fields": {
       "type": "object",
       "properties": {
-        "cadip:id": {
-          "type": "string",
-          "format": "uuid"
+        "externalIds": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["scheme", "value"],
+            "properties": {
+              "scheme": {
+                "const": "cadip"
+              },
+              "value": {
+                "type": "string",
+                "format": "uuid"
+              }
+            }
+          }
         },
         "cadip:acquisition_id": {
           "type": ["string", "integer"]
