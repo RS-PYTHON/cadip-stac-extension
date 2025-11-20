@@ -1,7 +1,8 @@
 {
   "stac_version": "1.1.0",
   "stac_extensions": [
-    "https://home.rs-python.eu/cadip-stac-extension/v1.3.0/schema.json",
+    "https://home.rs-python.eu/cadip-stac-extension/v1.4.0/schema.json",
+    "https://stac-extensions.github.io/external-ids/v1.0.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
   ],
@@ -16,7 +17,12 @@
     "platform": "sentinel-1a",
     "constellation": "sentinel-1",
     "published": "2024-11-14T14:31:11.032Z",
-    "cadip:id": "6894eb36-416e-469e-8788-9a0a2b8f3a8d",
+    "externalIds": [
+      {
+        "scheme": "cadip",
+        "value": "6894eb36-416e-469e-8788-9a0a2b8f3a8d"
+      }
+    ],
     "cadip:num_channels": 2,
     "cadip:station_unit_id": "04",
     "sat:absolute_orbit": 56552,
@@ -38,7 +44,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "228b97bc-aa04-4036-8450-3106bc7684bb",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "228b97bc-aa04-4036-8450-3106bc7684bb"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 1,
@@ -53,7 +64,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "bba71884-5c9c-4d4b-8986-1a428b87b441",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "bba71884-5c9c-4d4b-8986-1a428b87b441"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 1,
@@ -68,7 +84,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "6c9edc6c-f32c-4aef-956e-4fe02055e905",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "6c9edc6c-f32c-4aef-956e-4fe02055e905"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 2,
@@ -83,7 +104,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "9dadc880-2072-4b32-b407-07987d6ac026",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "9dadc880-2072-4b32-b407-07987d6ac026"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 2,
@@ -98,7 +124,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "93544013-687b-469f-aea0-ed568149cae7",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "93544013-687b-469f-aea0-ed568149cae7"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 3,
@@ -113,7 +144,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "9cae6fe7-f66f-4f23-b635-d4772145feb4",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "9cae6fe7-f66f-4f23-b635-d4772145feb4"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 3,
@@ -128,7 +164,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "fa77e569-988f-4cea-825a-eb8ae8a73079",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "fa77e569-988f-4cea-825a-eb8ae8a73079"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 4,
@@ -143,7 +184,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "b430bfbf-24ac-4024-800c-64c3bc86424e",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "b430bfbf-24ac-4024-800c-64c3bc86424e"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 4,
@@ -158,7 +204,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "0dcb0e1e-b90c-4cc6-80a9-ec8f666a3d0c",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "0dcb0e1e-b90c-4cc6-80a9-ec8f666a3d0c"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 5,
@@ -173,7 +224,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "2eb5be1b-2512-4cc2-a8bd-88b6d6cee86e",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "2eb5be1b-2512-4cc2-a8bd-88b6d6cee86e"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 5,
@@ -188,7 +244,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "3e75feb4-355c-4030-b270-e9b161f75601",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "3e75feb4-355c-4030-b270-e9b161f75601"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 6,
@@ -203,7 +264,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "c7a323d1-744b-4c59-8eb6-ee496cb03ddb",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "c7a323d1-744b-4c59-8eb6-ee496cb03ddb"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 6,
@@ -218,7 +284,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "b710a6b4-87a8-4181-8341-220904931d4a",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "b710a6b4-87a8-4181-8341-220904931d4a"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 7,
@@ -233,7 +304,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "70be03bc-c98f-4ee3-b041-610f2a12d6d1",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "70be03bc-c98f-4ee3-b041-610f2a12d6d1"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 7,
@@ -248,7 +324,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "97be66f9-9f9b-40e6-b441-8439c143bcfd",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "97be66f9-9f9b-40e6-b441-8439c143bcfd"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 8,
@@ -263,7 +344,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "33bc2567-86d5-4ed9-944b-82e68a5ba951",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "33bc2567-86d5-4ed9-944b-82e68a5ba951"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 8,
@@ -278,7 +364,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "1eb5df15-44fc-4bcc-b48b-c3f9c1890116",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "1eb5df15-44fc-4bcc-b48b-c3f9c1890116"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 9,
@@ -293,7 +384,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "365cb037-6630-4066-9908-1235e9da386a",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "365cb037-6630-4066-9908-1235e9da386a"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 10,
@@ -308,7 +404,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "b6189db0-63e2-4560-97ef-15a0aa09840d",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "b6189db0-63e2-4560-97ef-15a0aa09840d"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 9,
@@ -323,7 +424,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "70ce8b61-da40-467a-b5ce-7741170ee114",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "70ce8b61-da40-467a-b5ce-7741170ee114"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 11,
@@ -338,7 +444,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "985c89df-ca2c-41d7-beea-a8f840116fb0",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "985c89df-ca2c-41d7-beea-a8f840116fb0"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 10,
@@ -353,7 +464,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "c7d923f5-92f5-4527-8514-943eb62e9c84",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "c7d923f5-92f5-4527-8514-943eb62e9c84"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 12,
@@ -368,7 +484,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "b6f3f76e-d283-47a1-bc51-a47c11c467e4",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "b6f3f76e-d283-47a1-bc51-a47c11c467e4"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 12,
@@ -383,7 +504,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "0b504c75-64cf-41bb-afa0-f1e7bbf0eb64",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "0b504c75-64cf-41bb-afa0-f1e7bbf0eb64"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 11,
@@ -398,7 +524,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "d3c91655-2387-49a9-a745-00d27fc43132",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "d3c91655-2387-49a9-a745-00d27fc43132"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 13,
@@ -413,7 +544,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "90f3c19e-2dad-49ec-aa2e-16620c9502ff",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "90f3c19e-2dad-49ec-aa2e-16620c9502ff"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 13,
@@ -428,7 +564,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "ace17738-4068-4991-b012-300602739e84",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "ace17738-4068-4991-b012-300602739e84"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 14,
@@ -443,7 +584,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "652f6b59-38e5-4951-a7b8-af7b28fb3c6a",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "652f6b59-38e5-4951-a7b8-af7b28fb3c6a"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 14,
@@ -458,7 +604,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "19e10c8c-f786-4e8f-9a60-31851215a4a5",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "19e10c8c-f786-4e8f-9a60-31851215a4a5"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 15,
@@ -473,7 +624,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "3686651a-83bc-46f0-95ea-c0591772e255",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "3686651a-83bc-46f0-95ea-c0591772e255"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 15,
@@ -488,7 +644,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "34113a25-3d27-4ed8-bedb-c1e1a3dffc2f",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "34113a25-3d27-4ed8-bedb-c1e1a3dffc2f"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 16,
@@ -503,7 +664,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "a7bc86db-206e-4ffd-bee7-cd9102f0901a",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "a7bc86db-206e-4ffd-bee7-cd9102f0901a"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 16,
@@ -518,7 +684,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "7032f9d0-5aa1-406a-aee9-1f17a18d1978",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "7032f9d0-5aa1-406a-aee9-1f17a18d1978"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 17,
@@ -533,7 +704,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "8a71319c-2138-49b4-aec3-24fad69129ba",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "8a71319c-2138-49b4-aec3-24fad69129ba"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 17,
@@ -548,7 +724,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "e5ccdae1-248e-489d-9d99-090c8c0234e9",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "e5ccdae1-248e-489d-9d99-090c8c0234e9"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 18,
@@ -563,7 +744,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "410222ff-52eb-4869-92ef-bd89d86b4318",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "410222ff-52eb-4869-92ef-bd89d86b4318"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": true,
       "cadip:block_number": 19,
@@ -578,7 +764,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "2815dd38-08e5-44d5-8e78-b3d30a278ae3",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "2815dd38-08e5-44d5-8e78-b3d30a278ae3"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": false,
       "cadip:block_number": 18,
@@ -593,7 +784,12 @@
       "roles": [
         "cadu"
       ],
-      "cadip:id": "4ef09c22-2e8a-47d2-8680-54e137a74c85",
+      "externalIds": [
+        {
+          "scheme": "cadip",
+          "value": "4ef09c22-2e8a-47d2-8680-54e137a74c85"
+        }
+      ],
       "cadip:retransfer": false,
       "cadip:final_block": true,
       "cadip:block_number": 19,

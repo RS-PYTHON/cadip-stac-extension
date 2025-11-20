@@ -1,7 +1,7 @@
 # CADIP Extension Specification
 
 - **Title:** CADIP
-- **Identifier:** <https://home.rs-python.eu/cadip-stac-extension/v1.3.0/schema.json>
+- **Identifier:** <https://home.rs-python.eu/cadip-stac-extension/v1.4.0/schema.json>
 - **Field Name Prefix:** cadip
 - **Scope:** Item, Assets
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Pilot
@@ -19,7 +19,7 @@ Allows to describe Copernicus CADIP sessions from Acquisition Ground Stations as
 
 | Field Name                | Type            | Description                                                         |
 | ------------------------- | --------------- | ------------------------------------------------------------------- |
-| cadip:id                  | string (uuid)   | **REQUIRED**. UUID for the Session instance within the CADIP        |
+| externalIds\[scheme=cadip\] | string (uuid)   | **REQUIRED**. UUID for the Session instance within the CADIP        |
 | cadip:acquisition_id      | string / number | **REQUIRED**. Acquisition id code as from the acquisition plan      |
 | cadip:num_channels        | number          | This is the number of channels for the session (1, 2, 3, 4)         |
 | cadip:station_id          | string          | Parameter for distinguishing acquisition station.                   |
@@ -36,9 +36,10 @@ Allows to describe Copernicus CADIP sessions from Acquisition Ground Stations as
 
 ### Additional Item Property Information
 
-#### cadip:id
+#### externalIds\[scheme=cadip\]
 
 Universally unique identifier (UUID). It is a local identifier for the Session instance within the CADIP, assigned by the service managing it.
+This property makes use of the [Additional Identifiers](https://github.com/stac-extensions/external-ids) extension.
 
 #### cadip:acquisition_id
 
@@ -106,7 +107,7 @@ It is set to the value depending on the evaluation of the data dissemination to 
 
 | Field Name                | Type          | Description                                                                   |
 | ------------------------- | ------------- | ----------------------------------------------------------------------------- |
-| cadip:id                  | string (uuid) | **REQUIRED**. UUID for the DSDB File instance within the CADIP                |
+| externalIds\[scheme=cadip\] | string (uuid) | **REQUIRED**. UUID for the DSDB File instance within the CADIP                |
 | cadip:channel             | number        | **REQUIRED**. This is the channel (1, 2, 3, 4)                                |
 | cadip:block_number        | number        | **REQUIRED**. DSDB numbering, always starting from 1 in each session          |
 | cadip:final_block         | boolean       | **REQUIRED**. Set to true if it corresponds to the final file for the session |
@@ -114,9 +115,10 @@ It is set to the value depending on the evaluation of the data dissemination to 
 
 ### Additional Asset Field Information
 
-#### cadip:id
+#### externalIds\[scheme=cadip\]
 
 Universally unique identifier (UUID). Local identifier for the DSDB File instance within the CADIP, assigned by the service managing it.
+This property makes use of the [Additional Identifiers](https://github.com/stac-extensions/external-ids) extension.
 
 #### cadip:channel
 
