@@ -12,16 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Check Markdown and Examples
-on: [push, pull_request]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 'lts/*'
-      - uses: actions/checkout@v6
-      - run: |
-          npm install
-          npm test
+default_language_version:
+    python: python3
+default_stages: [pre-commit]
+repos:
+
+# Basic verifications
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+    -   id: check-merge-conflict
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+    -   id: check-json
+    -   id: check-xml
+    -   id: check-yaml
+
+- repo: https://github.com/google/addlicense
+  rev: v1.2.0
+  hooks:
+  - id: addlicense
+    files: \.(css|html|js|py|sh|yml|yaml)$
+    args: [ "-c", "Airbus", "-l", "apache" ]
