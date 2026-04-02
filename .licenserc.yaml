@@ -12,22 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Publish JSON Schema
-on:
-  release:
-    types: [published]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Inject env variables
-        uses: rlespinasse/github-slug-action@v5.1.0
-      - uses: actions/checkout@v6
-      - name: deploy JSON Schema for version ${{ env.GITHUB_REF_SLUG }}
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: json-schema
-          destination_dir: ${{ env.GITHUB_REF_SLUG }}
+header:
+  license:
+    spdx-id: Apache-2.0
+    copyright-owner: Airbus
+
+  paths-ignore:
+    - '**/*.csv'
+    - '**/*.env'
+    - '**/*.json'
+    - '**/*.lock'
+    - '**/*.md'
+    - '**/*.raw'
+    - '**/Dockerfile*'
+    - '**/.gitignore'
+    - '.gitmodules'
+    - '.safety-project.ini'
+    - '.trivyignore'
+    - 'LICENSE'
+    - 'NOTICE'
+
+  comment: on-failure
