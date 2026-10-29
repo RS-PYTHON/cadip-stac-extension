@@ -213,12 +213,25 @@
         "externalIds": {
           "type": "array",
           "minItems": 1,
-          "items": {
+          "contains": {
             "type": "object",
             "required": ["scheme", "value"],
             "properties": {
               "scheme": {
                 "const": "cadip"
+              },
+              "value": {
+                "type": "string",
+                "format": "uuid"
+              }
+            }
+          },
+          "items": {
+            "type": "object",
+            "required": ["scheme", "value"],
+            "properties": {
+              "scheme": {
+                "type": "string"
               },
               "value": {
                 "type": "string",

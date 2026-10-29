@@ -21,6 +21,10 @@
       {
         "scheme": "cadip",
         "value": "6894eb36-416e-469e-8788-9a0a2b8f3a8d"
+      },
+      {
+        "scheme": "rs-odata-prip",
+        "value": "8c66be0c-2463-40ea-afd3-6dbf615be971"
       }
     ],
     "cadip:num_channels": 2,
