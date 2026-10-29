@@ -1,7 +1,7 @@
 # CADIP Extension Specification
 
 - **Title:** CADIP
-- **Identifier:** <https://home.rs-python.eu/cadip-stac-extension/v1.4.0/schema.json>
+- **Identifier:** <https://home.rs-python.eu/cadip-stac-extension/v1.4.1/schema.json>
 - **Field Name Prefix:** cadip
 - **Scope:** Item, Assets
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Pilot

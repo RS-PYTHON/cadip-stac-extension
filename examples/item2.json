@@ -1,7 +1,7 @@
 {
   "stac_version": "1.1.0",
   "stac_extensions": [
-    "https://home.rs-python.eu/cadip-stac-extension/v1.4.0/schema.json",
+    "https://home.rs-python.eu/cadip-stac-extension/v1.4.1/schema.json",
     "https://stac-extensions.github.io/external-ids/v1.0.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
@@ -21,6 +21,10 @@
       {
         "scheme": "cadip",
         "value": "6894eb36-416e-469e-8788-9a0a2b8f3a8d"
+      },
+      {
+        "scheme": "rs-odata-prip",
+        "value": "8c66be0c-2463-40ea-afd3-6dbf615be971"
       }
     ],
     "cadip:num_channels": 2,
